@@ -1,0 +1,45 @@
+@use "../../assets/variables.scss" as *;
+
+.footer {
+  background-color: $item-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__image--logo {
+    width: 50px;
+    background-color: $item-color;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__text {
+    background-color: $item-color;
+    font-size: 1em;
+    color: #24305e;
+    font-family: $main-font, Arial, Helvetica, sans-serif;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+    &__text {
+      font-size: 1.5em;
+    }
+
+    &__image--logo {
+      width: auto;
+    }
+  }
+}

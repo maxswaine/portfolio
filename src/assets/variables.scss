@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap");
+
+//Colour Scheme
+$background-color: #a8d0e6;
+$text-color: white;
+$item-color: #f8e9a1;
+$color-red: #f76c6c;
+$opacity: 0.7;
+$color-blue: #272643;
+
+$rgba-color: rgba($color-red, $opacity);
+$blue-opacity: rgba($color-blue, $opacity);
+
+//Font styles
+$title-font: "Roboto";
+$main-font: "Quicksand";
+
+//For grid items:
+$items-to-show: 3;

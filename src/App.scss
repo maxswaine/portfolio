@@ -1,0 +1,18 @@
+@use "../src/assets/variables.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    section {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+}

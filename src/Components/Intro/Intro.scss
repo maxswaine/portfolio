@@ -1,0 +1,105 @@
+@use "../../assets/variables.scss" as *;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+  &__title {
+    font-size: 2em;
+    font-family: $main-font;
+    font-weight: bold;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    width: 15em;
+    height: 3em;
+    border: $color-red 2px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px $color-red;
+    margin: 4em 0 4em 0;
+  }
+
+  &__area {
+    &--subtitle {
+      margin: 0.8em 0.5em 0em 0.5em;
+      font-size: 3em;
+      font-family: $title-font;
+
+      span {
+        background-image: linear-gradient($rgba-color, $rgba-color);
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 100% 0.4em;
+        margin: 0;
+      }
+    }
+
+    &--image {
+      display: none;
+      border-radius: 25px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 4em;
+
+    &__title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    &__area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+
+      &--subtitle {
+        font-size: 2em;
+        text-align: center;
+        margin: 2em 0 2.2em 0;
+      }
+    }
+    &__button {
+      margin: 4em 0 4em 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__title {
+      font-size: 2.5em;
+    }
+
+    &__area {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+
+      &--subtitle {
+        font-size: 3.5em;
+        margin: 0 20px 0 0;
+      }
+
+      &--image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 30%;
+      }
+    }
+
+    &__button {
+      font-size: 1.5em;
+      width: 20em;
+      height: 5em;
+    }
+  }
+}

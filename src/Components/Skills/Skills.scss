@@ -1,0 +1,62 @@
+@use "../../assets/variables.scss" as *;
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  
+    &__title {
+      font-size: 2em;
+      font-family: $title-font;
+      background-image: linear-gradient(to right, $blue-opacity, $blue-opacity);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: 100% 0.4em;
+      background-origin: content-box;
+      color: white;
+      display: inline-block;
+      padding: 1em 0 1em 0;
+    }
+  
+    .skills-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+  
+      .skills__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6em;
+        width: 5em;
+        margin-bottom: 20px;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      &__title {
+        font-size: 2em;
+      }
+  
+      .skills-grid {
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
+        margin-bottom: 1em;
+  
+        .skills__image {
+          width: 7%;
+          height: auto;
+          margin: 10px 10px;
+        }
+      }
+    }
+  }
+  

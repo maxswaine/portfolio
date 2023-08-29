@@ -1,0 +1,100 @@
+@use "../../assets/variables.scss" as *;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.25rem;
+  align-items: center;
+  height: 5rem;
+  max-width: 100%;
+
+  &__logo {
+    font-family: $title-font, Arial, Helvetica, sans-serif;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  &__tabs {
+    .nav__icon {
+      height: 3rem;
+      width: 3rem;
+    }
+
+    .nav__button {
+      display: none;
+      font-size: 0;
+      cursor: pointer;
+    }
+
+    &--button-right {
+      margin-left: 10px;
+      height: 2rem;
+      background-size: 0 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+
+    &__logo {
+      font-size: 1.5rem;
+    }
+
+    &__tabs {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+
+      .nav__icon {
+        display: none;
+      }
+
+      .nav__button {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-size: 1rem;
+        color: white;
+        width: auto;
+        text-decoration: none;
+        font-family: $main-font, Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(
+          to right,
+          $blue-opacity,
+          $blue-opacity
+        );
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: auto 0.2rem;
+        background-origin: content-box;
+        color: white;
+        display: inline-block;
+
+        &--button-right {
+          height: 2rem;
+          background-size: 0 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 7rem;
+
+    &__logo {
+      font-size: 2rem;
+    }
+
+    &__tabs {
+      .nav__button {
+        font-size: 2rem;
+
+        &--button-right {
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
