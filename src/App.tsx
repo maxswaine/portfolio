@@ -6,6 +6,7 @@ import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import projects from "./Data/data";
 import { HashRouter } from "react-router-dom";
+import AboutMe from "./Components/AboutMe/AboutMe";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Intro />
         <Skills />
         <Projects projects={projects} />
+        <AboutMe />
         <Footer />
       </div>
     </HashRouter>

@@ -1,0 +1,99 @@
+@use "../../assets/variables.scss" as *;
+
+.about {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  max-width: 100%;
+
+  &__title {
+    font-size: 2em;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: $title-font, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, $blue-opacity, $blue-opacity);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-origin: content-box;
+    display: inline-block;
+    color: white;
+  }
+
+  &__area {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .about__image--self {
+      width: 40%;
+      height: auto;
+      margin: 20px;
+      border-radius: 20px;
+    }
+
+    .about__image--cartoon {
+      display: none;
+    }
+  }
+
+  &__description {
+    font-family: $main-font, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: $color-blue;
+    width: 90%;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      margin-top: 5em;
+      font-size: 2em;
+    }
+
+    &__area {
+      flex-direction: row;
+
+      .about__image--self {
+        width: 30%;
+        margin: 40px;
+      }
+    }
+
+    &__description {
+      padding: 30px;
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__area {
+      .about__image--self {
+        display: none;
+      }
+
+      .about__image--cartoon {
+        display: flex;
+        width: 35%;
+        margin: 40px;
+      }
+    }
+
+    &__description {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__description {
+      font-size: 1.5em;
+    }
+
+    &__title {
+      font-size: 3em;
+    }
+  }
+}
