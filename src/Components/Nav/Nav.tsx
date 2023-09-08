@@ -1,6 +1,7 @@
-import "./Nav.scss"; 
+import "./Nav.scss";
 import hamburgerMenu from "../../assets/images/hamburger-menu-svgrepo-com.svg";
 import button from "../../assets/images/Frame 1.svg";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
   return (
@@ -17,12 +18,12 @@ const Nav = () => {
         <a className="nav__button" href="#">
           Home
         </a>
-        <a className="nav__button" href="#about__start">
+        <HashLink className="nav__button" smooth to="#about">
           About
-        </a>
-        <a className="nav__button" href="#projects">
+        </HashLink>
+        <HashLink smooth to="/#projects" className="nav__button">
           Projects
-        </a>
+        </HashLink>
         <img
           src={button}
           alt="get in touch button"

@@ -1,5 +1,6 @@
 import profilePicture from "../../assets/images/IMG_1905.jpg";
 import "./Intro.scss";
+import { HashLink } from "react-router-hash-link";
 
 const Intro = () => {
   return (
@@ -15,7 +16,9 @@ const Intro = () => {
           alt="pic of me"
         />
       </div>
-      <button className="intro__button">Take a look at my work ↯</button>
+      <HashLink smooth to="/#projects" className="intro__button">
+        Take a look at my work ↯
+      </HashLink>
     </section>
   );
 };
