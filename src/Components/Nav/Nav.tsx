@@ -1,7 +1,7 @@
 import "./Nav.scss";
-import hamburgerMenu from "../../assets/images/hamburger-menu-svgrepo-com.svg";
 import button from "../../assets/images/Frame 1.svg";
 import { HashLink } from "react-router-hash-link";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Nav = () => {
   return (
@@ -9,11 +9,7 @@ const Nav = () => {
       <h1 className="nav__logo">Max Swaine</h1>
       <div className="nav__tabs">
         <div className="nav__dropdown">
-          <img
-            className="nav__icon"
-            src={hamburgerMenu}
-            alt="menu-burger icons"
-          />
+          <Sidebar />
         </div>
         <a className="nav__button" href="#">
           Home
