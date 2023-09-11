@@ -12,9 +12,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       <h2 className="projects__title">My Projects</h2>
       <div className="card-container">
         {projects.map((project, index) => (
-          <div className="card-container__item" key={index}>
-            <ProjectCard project={project} />
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </div>
