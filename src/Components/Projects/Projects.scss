@@ -36,13 +36,10 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
       justify-content: center;
+      width: 80%;
 
       .card-container__item {
         display: flex;
-
-        &:nth-last-child(-n + #{$items-to-show}) {
-          display: none;
-        }
       }
     }
   }

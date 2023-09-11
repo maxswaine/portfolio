@@ -7,16 +7,15 @@ type ProjectsProps = {
 };
 
 const Projects = ({ projects }: ProjectsProps) => {
-
   return (
-    <div className="projects" id="projects"> 
+    <div className="projects" id="projects">
       <h2 className="projects__title">My Projects</h2>
       <div className="card-container">
-        <div className="card-container__item">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+        {projects.map((project, index) => (
+          <div className="card-container__item" key={index}>
+            <ProjectCard project={project} />
+          </div>
+        ))}
       </div>
     </div>
   );
