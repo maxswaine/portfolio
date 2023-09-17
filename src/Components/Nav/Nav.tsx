@@ -2,19 +2,8 @@ import "./Nav.scss";
 import button from "../../assets/images/Frame 1.svg";
 import { HashLink } from "react-router-hash-link";
 import Sidebar from "../Sidebar/Sidebar";
-import { useState } from "react";
-import blackCross from "../../assets/images/black-cross.png";
 
 const Nav = () => {
-  const [showPopup, setShowPopup] = useState<boolean>(false);
-
-  const handleGetInTouch = () => {
-    setShowPopup(!showPopup);
-  };
-
-  const handleClose = () => {
-    setShowPopup(!showPopup);
-  };
 
   return (
     <div className="nav">
