@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Nav = () => {
+
   return (
     <div className="nav">
       <h1 className="nav__logo">Max Swaine</h1>
